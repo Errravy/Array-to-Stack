@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+class stek
+{
+ public void display(Stack stack)
+ {
+      foreach ( var item in stack)
+    {
+        Console.Write(item + " ");
+    } 
+ }   
+ static void Main ()
+ {
+    stek stek   = new stek();
+    Stack stack = new Stack();
+    int[] angka = new int[]{1,2,3,4,5,6,7,8,9,10};
+    Console.Write("isi Stack: ");
+    for (int i = 0;i < angka.Length; i++)
+    {
+        stack.Push(angka[i]);
+    }
+    stek.display(stack); Console.WriteLine();
+    Console.Write("Stack setelh pop : ");
+    while (stack.Count > 5)
+    {
+      stack.Pop();
+    }
+    stek.display(stack); Console.WriteLine();
+    Console.Write("isi Peek : " + stack.Peek());
+    Console.ReadLine();
+ }
+}
