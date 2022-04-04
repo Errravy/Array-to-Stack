@@ -13,7 +13,7 @@ class stek
         }
         Console.WriteLine();
     }
-    int pop(int j)
+    void pop(int j)
     {
         Console.Write("Stack setelah pop: ");
         top = angka.Length - (j + 1);
@@ -23,19 +23,17 @@ class stek
         }
         top = top + 1;
         Console.WriteLine();
-        return top;
     }
     void peek()
     {
          stek stack = new stek();
          Console.Write("top dari stack: " + top);
-
     }
     static void Main()
     {
         stek stack = new stek();
         stack.push();
-        stack.pop(3);
+        stack.pop(2);
         stack.peek();
         Console.ReadKey();
     }
